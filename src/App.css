@@ -1,0 +1,153 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+.search {
+  width: 40vh;
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-top: 5vh;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #27374d;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9db2bf;
+}
+
+.searchTerm:focus {
+  color: #526d82;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #27374d;
+  background: #27374d;
+  text-align: center;
+  color: #dde6ed;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+path {
+  fill: #526d82;
+}
+
+.banner {
+  width: 100%;
+  background-color: #27374d;
+  color: #dde6ed;
+
+  border-radius: 15px;
+}
+
+.city_name {
+  font-size: 1rem;
+  font-weight: 350;
+  float: left;
+  padding-left: 2vh;
+  display: flex;
+  align-items: center;
+}
+
+.temperature {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.temp {
+  margin: 0;
+  font-size: 8rem;
+}
+
+.unit {
+  display: flex;
+  align-items: end;
+  margin-bottom: 5vh;
+}
+
+.description {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+label {
+  font-weight: 600;
+  color: #526d82;
+  white-space: pre-line;
+}
+
+.details p {
+  color: #27374d;
+}
+
+/* .banner_fadeBottom {
+  height: 3rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(67, 125, 234, 0.61),
+    #ffffff
+  );
+} */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .search {
+    width: 60vh;
+  }
+
+  .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .App {
+    width: 80%;
+    margin: auto;
+    box-shadow: #00b4cc;
+  }
+
+  .search {
+    width: 60vh;
+  }
+
+  .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
